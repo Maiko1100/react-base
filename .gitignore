@@ -1,0 +1,52 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# testing
+coverage
+
+# production
+build
+
+# misc
+.DS_Store
+.env
+npm-debug.log
+.idea/ReactTest.iml
+.idea/copyright/profiles_settings.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+dist/app.js
+node_modulesasdf/react-scripts/.babelrc
+node_modulesasdf/react-scripts/.eslintrc
+node_modulesasdf/react-scripts/README.md
+node_modulesasdf/react-scripts/bin/react-scripts.js
+node_modulesasdf/react-scripts/config/env.js
+node_modulesasdf/react-scripts/config/jest/babelTransform.js
+node_modulesasdf/react-scripts/config/jest/cssTransform.js
+node_modulesasdf/react-scripts/config/jest/fileTransform.js
+node_modulesasdf/react-scripts/config/paths.js
+node_modulesasdf/react-scripts/config/polyfills.js
+node_modulesasdf/react-scripts/config/webpack.config.dev.js
+node_modulesasdf/react-scripts/config/webpack.config.prod.js
+node_modulesasdf/react-scripts/package.json
+node_modulesasdf/react-scripts/scripts/build.js
+node_modulesasdf/react-scripts/scripts/eject.js
+node_modulesasdf/react-scripts/scripts/init.js
+node_modulesasdf/react-scripts/scripts/start.js
+node_modulesasdf/react-scripts/scripts/test.js
+node_modulesasdf/react-scripts/template/README.md
+node_modulesasdf/react-scripts/template/gitignore
+node_modulesasdf/react-scripts/template/public/favicon.ico
+node_modulesasdf/react-scripts/template/public/index.html
+node_modulesasdf/react-scripts/template/src/App.css
+node_modulesasdf/react-scripts/template/src/App.js
+node_modulesasdf/react-scripts/template/src/App.test.js
+node_modulesasdf/react-scripts/template/src/index.css
+node_modulesasdf/react-scripts/template/src/index.js
+node_modulesasdf/react-scripts/template/src/logo.svg
+node_modulesasdf/react-scripts/utils/createJestConfig.js
