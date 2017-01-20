@@ -4,20 +4,20 @@ body {
   font-family: sans-serif;
 }
 
-.header-container{
+.header{
   width: 100%;
   height: 50px; 
   background-color: #2e333a;
 }
 
-.header-container .companyName{
+.header .companyName{
   float: left; 
   line-height: 50px;
   margin-left: 10px;
   color: floralwhite;  
 }
 
-ul {
+.header ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -25,18 +25,25 @@ ul {
     float: right;
 }
 
-li {
+.header li {
     float: left;
 }
 
-li a {
+.header li a {
     display: block;
-    color: white;
+    color: white !important;
     text-align: center;
-    padding: 16px 16px;
-    text-decoration: none;
+    padding: 14.5px 16px;
+    text-decoration: none !important;
 }
 
-li:hover {
-    background-color: #111;
+.header li:hover {
+    background-color: #2e333a;
 }
+
+.header li:hover a{       
+    color: #2e333a !important;
+    background-color: white;
+}
+
+

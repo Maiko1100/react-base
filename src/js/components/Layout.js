@@ -1,7 +1,9 @@
-import React, {Component}from "react"
-import {connect} from "react-redux"
+import React, { Component } from "react"
+import { connect } from "react-redux"
+
 
 import {fetchUser} from "../actions/userActions"
+
 import MDSpinner from "react-md-spinner";
 
 @connect((store) => {
@@ -24,24 +26,12 @@ export default class Layout extends Component {
 
 
     render() {
-        const {user, fetchedUser} = this.props;
-
-
-        var spinner;
-
-
-        // if (!fetchedUsers) {
-        //     spinner = <MDSpinner/>
-        // }
 
         return <div>
 
-            <h1>Hier komt een naam:{this.props.user}</h1>
 
-            {console.log(this.props.user)}
-            <input ref="username" type="text" placeholder="Gebruikersnaam"/>
-            <input ref="password" type="password" placeholder="Wachtwoord"/>
-
+            <input ref="username" type="text" placeholder="Gebruikersnaam" />
+            <input ref="password" type="text" placeholder="Wachtwoord" />
             <button onClick={this.login.bind(this)}>login</button>
 
         </div>
