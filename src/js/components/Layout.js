@@ -1,18 +1,14 @@
 import React, {Component}from "react"
 import {connect} from "react-redux"
 
-import {fetchUsers} from "../actions/userActions"
 import {fetchUser} from "../actions/userActions"
-import {fetchUser2} from "../actions/userActions"
 import MDSpinner from "react-md-spinner";
 
 @connect((store) => {
     return {
-        users: store.users.users,
-        user: store.users.user,
-        fetchedUsers: store.users.fetchedUsers,
-        fetchedUser: store.users.fetchedUser,
-        fetchingUser: store.users.fetchingUser
+        user: store.user,
+        // fetchedUser: store.data.fetchedUser,
+        // fetchingUser: store.data.fetchingUser
     };
 })
 export default class Layout extends Component {
@@ -21,48 +17,30 @@ export default class Layout extends Component {
 
     }
 
-    fetchUsers() {
-        this.props.dispatch(fetchUsers())
-    }
-
-    fetchUser() {
-        this.props.dispatch(fetchUser(this.refs.id.value))
-    }
 
     login() {
-        this.props.dispatch(fetchUser2(this.refs.username.value, this.refs.password.value))
+        this.props.dispatch(fetchUser(this.refs.username.value, this.refs.password.value))
     }
 
 
     render() {
-        const {users, fetchedUsers, fetchingUser} = this.props;
+        const {user, fetchedUser} = this.props;
 
 
-        const mappedUsers = users.map(user => <li key={user.id}>{user.name}</li>)
-        var spinner, spinner2;
+        var spinner;
 
 
-        if (!fetchedUsers) {
-            spinner = <MDSpinner/>
-        }
-        if (fetchingUser) {
-            spinner2 = <MDSpinner/>
-        }
+        // if (!fetchedUsers) {
+        //     spinner = <MDSpinner/>
+        // }
 
         return <div>
-            <input ref="id" onChange={(e) => {
-                this.fetchUser();
-            }} type="text"/>
 
-            <h1>Hier komt een naam:{spinner2} {this.props.user.name}</h1>
+            <h1>Hier komt een naam:{this.props.user}</h1>
 
-            <button onClick={this.fetchUsers.bind(this)}>load users</button>
-            <br/>
-            {spinner}
-            <ul>{mappedUsers}</ul>
-
+            {console.log(this.props.user)}
             <input ref="username" type="text" placeholder="Gebruikersnaam"/>
-            <input ref="password" type="text" placeholder="Wachtwoord"/>
+            <input ref="password" type="password" placeholder="Wachtwoord"/>
 
             <button onClick={this.login.bind(this)}>login</button>
 
