@@ -1,8 +1,9 @@
 import axios from "axios";
+export function fetchUser(id) {
 
-export function fetchUser() {
     return function(dispatch) {
-        axios.get("https://jsonplaceholder.typicode.com/users/1")
+        dispatch({type: "FETCH_USER", payload: ""})
+        axios.get("https://jsonplaceholder.typicode.com/users/"+id)
             .then((response) => {
                 dispatch({type: "FETCH_USER_FULFILLED", payload: response.data})
             })
@@ -14,6 +15,7 @@ export function fetchUser() {
 
 export function fetchUsers() {
   return function(dispatch) {
+
     axios.get("https://jsonplaceholder.typicode.com/users")
         .then((response) => {
           dispatch({type: "FETCH_USERS_FULFILLED", payload: response.data})
