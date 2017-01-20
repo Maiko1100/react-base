@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 
 
 import {fetchUser} from "../actions/userActions"
+import {testApi} from "../actions/userActions"
 
 import MDSpinner from "react-md-spinner";
 
@@ -16,7 +17,7 @@ import MDSpinner from "react-md-spinner";
 export default class Layout extends Component {
 
     componentWillMount() {
-
+        this.props.dispatch(testApi())
     }
 
 
